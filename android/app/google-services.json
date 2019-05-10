@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "166630060298",
+    "firebase_url": "https://campusdoc-f3364.firebaseio.com",
+    "project_id": "campusdoc-f3364",
+    "storage_bucket": "campusdoc-f3364.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:166630060298:android:7f8045271bcc712f",
+        "android_client_info": {
+          "package_name": "com.campus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "166630060298-pc5ptmoi07irkt75l12l7fv7uvd7lkev.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMKDndjBcaevJErU_rWzHN_cvC-r6aCeY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "166630060298-pc5ptmoi07irkt75l12l7fv7uvd7lkev.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

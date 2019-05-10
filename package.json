@@ -1,0 +1,34 @@
+{
+  "name": "campus",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "moment": "^2.24.0",
+    "native-base": "^2.12.1",
+    "react": "16.8.3",
+    "react-native": "0.59.5",
+    "react-native-calendars": "^1.102.0",
+    "react-native-datepicker": "^1.7.2",
+    "react-native-gesture-handler": "^1.2.1",
+    "react-native-gifted-chat": "^0.8.0",
+    "react-native-linear-gradient": "^2.5.4",
+    "react-native-paper": "^2.15.2",
+    "react-navigation": "^3.9.1",
+    "react-navigation-material-bottom-tabs": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/runtime": "^7.4.4",
+    "babel-jest": "^24.8.0",
+    "jest": "^24.8.0",
+    "metro-react-native-babel-preset": "^0.54.0",
+    "react-test-renderer": "16.8.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
