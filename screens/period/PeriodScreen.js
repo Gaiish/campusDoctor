@@ -10,11 +10,15 @@ var moment = require('moment')
 export default class PeriodScreen extends Component {
   constructor(){
     super()
-    this.state = {
-      numofperiod: 0,
-      lengthofperiod: '',
-      perioddate: '',
-    }
+
+    //this is no longer needed
+    //this.state = {
+      // numofperiod: 0,
+      // lengthofperiod: '',
+      // perioddate: '',
+    // }
+
+
 
 
     //here we have to find a way to pass all dates we want to mark at once
@@ -22,29 +26,14 @@ export default class PeriodScreen extends Component {
     //change it over time or pass to it something from the state
     this.periods = {
       '2019-05-20': {startingDay: true, color: '#d71a3a', textColor: '#ffffff'},
-      ...this.markDates(this.getSundaysInYear())
+      ...this.markDates(this.getSundaysInYear()),
+      //you can add the other markedperiods here
+      ...this.markedperiods()
     }
   }
 
 
-  componentDidMount(){
-    console.log('componentDidMount')
-    AsyncStorage.getItem("@key_period").then((r)=>{
-      var periodData = JSON.parse(r)
-      console.log('r:'+r)
-     this.setState({numofperiod: periodData.numofperiod}),
-     this.setState({lengthofperiod: periodData.lengthofperiod}),
-     this.setState({perioddate: periodData.perioddate})
 
-     //calling setState many times is very bad here
-     //better call it once like this
-     //this.setState({
-      // numofperiod: periodData.numofperiod,
-      // lengthofperiod: periodData.lengthofperiod,
-      // perioddate: periodData.perioddate
-    // })
-    })
-  }
 
   //periods = () => {
 
@@ -63,6 +52,31 @@ export default class PeriodScreen extends Component {
       markedDates[datesArray[i]] = {selected: true, color: '#d71a3a', textColor: '#ffffff'}
     }
     return markedDates
+  }
+
+
+  //suppose this is the function
+  //we make it an async if we choose to use await instead of .then .catch
+  async markedperiods(){
+    let periods = {}
+    // periods[this.state.perioddate] = {selected: true, color: '#d71a3a', textColor: '#ffffff'}
+    // return periods
+
+    //___START_____
+
+    let data = await AsyncStorage.getItem("@key_period")
+    let parsedData = JSON.parse(data)
+
+    //here you write the code to get the list of dates to mark
+    //it's more about making some calculation with the data from AsyncStorage
+    //add the dates to the periods object
+
+
+    return periods
+
+    //_____END_______
+
+
   }
 
   getSundaysInMonth(year, month){
